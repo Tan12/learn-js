@@ -1,0 +1,154 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, table, th, td, embed, object {
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+div#container{
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p#scoreBoard{
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 100px;
+  color: #636163;
+}
+
+ul#gameView li{
+    list-style: none;
+}
+ul#gameView,
+ul#gameView li,
+ul#gameView li:after,
+button#restart{
+    border-radius: 8px;
+}
+ul#gameView {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #CDB59B;
+    padding: 3px;
+}
+ul#gameView li {
+    position: relative;
+    width: 115px;
+    height: 115px;
+    margin: 5px;
+    float: left;
+    background-color: #CEC6BD;
+}
+ul#gameView li:after {//如果在前面加上div#container，li.v4:after及以上出不来
+    content: '';
+    display: block;
+    width: 115px;
+    height: 115px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    line-height: 115px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    background-color: #CEC6BD;
+    transition: all .3s;
+}
+
+ul#gameView li.v2:after {
+    content: '2';
+    color: #636163;
+    background-color: #FFEFDE;
+    transition: all .3s;
+}
+ul#gameView li.v4:after {
+    content: '4';
+    color: #636163;
+    background-color: #FFE7BD;
+    transition: all .3s;
+}
+ul#gameView li.v8:after {
+    content: '8';
+    color: #EEE;
+    background-color: #F59563;
+    transition: all .3s;
+}
+ul#gameView li.v16:after {
+    content: '16';
+    color: #EEE;
+    background-color: #ED8040;
+    transition: all .3s;
+}
+ul#gameView li.v32:after {
+    content: '32';
+    color: #EEE;
+    background-color: #ED6140;
+    transition: all .3s;
+}
+
+ul#gameView li.v64:after {
+    content: '64';
+    color: #EEE;
+    background-color: #F23B0C;
+    transition: all .3s;
+}
+
+ul#gameView li.v128:after {
+    font-size: 45px;
+    content: '128';
+    color: #EEE;
+    background-color: #EDCF72;
+    transition: all .3s;
+}
+
+ul#gameView li.v256:after {
+    font-size: 45px;
+    content: '256';
+    color: #EEE;
+    background-color: #EDCC61;
+    transition: all .3s;
+}
+
+ul#gameView li.v512:after {
+    font-size: 45px;
+    content: '512';
+    color: #EEE;
+    background-color: #EDC850;
+    transition: all .3s;
+}
+
+ul#gameView li.v1024:after {
+    font-size: 40px;
+    content: '1024';
+    color: #EEE;
+    background-color: #EDC53F;
+    transition: all .3s;
+}
+
+ul#gameView li.v2048:after {
+    font-size: 40px;
+    content: '2048';
+    color: #EEE;
+    background-color: #EDC22E;
+    transition: all .3s;
+}
+
+div#container button#restart{
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+    font-weight: 600;
+    border: 0;
+    outline: 0;
+    background-color: #9DCD14;
+    color: #fff;
+    margin-top: 30px;
+}
