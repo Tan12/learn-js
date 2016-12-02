@@ -1,0 +1,40 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, table, th, td, embed, object {
+    padding: 0;
+    margin: 0;
+}
+div.container{
+    text-align: center;
+}
+div.container:before{
+    content: '';
+    display: block;
+}
+div.message{
+    width: 1080px;
+    height: 400px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin-top: 30px;
+    overflow: hidden;
+}
+div.message p{
+    position: absolute;
+}
+.txt{
+    width: 300px;
+    height: 30px;
+    margin: 10px 0;
+}
+.btn{
+    background-color: transparent;
+    width: 100px;
+    height: 30px;
+}
+.submit{
+    color: lightcoral;
+    border: 1px solid lightcoral;
+}
+.clear{
+    color: #778899;
+    border: 1px solid #778899;
+}
