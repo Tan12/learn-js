@@ -1,0 +1,36 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, table, th, td, embed, object {
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container{
+    width: 500px;
+    margin: 10% auto auto auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #fff;
+}
+.quote-text,
+.quote-author{
+    opacity: 0;
+}
+.quote-text{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.quote-author{
+    text-align: right;
+    display: block;
+}
+.change{
+    width: 150px;
+    color: #fff;
+    padding: 10px;
+    border-style: none;
+    margin-top: 30px;
+    outline: none; /* 去除点击后蓝框 */
+}

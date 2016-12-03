@@ -24,6 +24,7 @@ div.message p{
     width: 300px;
     height: 30px;
     margin: 10px 0;
+    padding: 0 5px;
 }
 .btn{
     background-color: transparent;
