@@ -102,8 +102,34 @@
         // 于是我将判断条件改成text>=0，通过强制类型转换来比较筛选出数字
         // 这样终于可以了
         if(text>=0 || arr.indexOf(text)>-1){
-            cal += text;
-            $('input').val(cal);
+          // 如果输入的是计算符号，则需要进一步处理
+          if(arr.indexOf(text) > -1){
+              //如果当前表达式已经包含小数点，则不能再继续输入小数点
+              if(text==='.' && cal.indexOf('.')>-1){
+                return false;
+              }
+              //如果当前表达式的最后一位是计算符号，则不能再继续输入计算符号
+              if(arr.indexOf(text)>-1 && arr.indexOf(cal[cal.length-1])>-1){
+                return false;
+              }
+              // 如果输入的是%，则直接对当前表达式最后的数字除以100
+              // 感觉对%的处理好繁琐，不知道有没有简单点的方法，，，
+              if(text === '%'){
+                var where, i;
+                for(i=cal.length; i>0; i--){
+                  if(arr.indexOf(cal[i]) > -1){
+                    where = i;
+                    break;
+                  }
+                }
+                per = cal.slice(i+1) + '/100';
+                cal = cal.slice(0,i+1) + eval(per);
+                $('input').val(cal);
+                return false;
+              }
+          }
+          cal += text;
+          $('input').val(cal);
         }else if (text === 'AC') {
             cal = '';
             $('input').val('');
