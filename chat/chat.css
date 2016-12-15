@@ -1,0 +1,49 @@
+body,h1{
+    margin: 0;
+    padding: 20px;
+}
+p{margin: 0; padding: 0;}
+h1{ text-align: center; }
+/*
+去除谷歌浏览器自动填充文本框的黄色背景色，但是背景颜色去掉了，边框样式没改掉，很丑，，，，
+所以我干脆关闭了自动填充
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+*/
+.container{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #333;
+}
+.messageWindow, .chatForm{
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px;
+}
+.messageWindow{
+    height: 300px;
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+}
+.chatForm div{
+    margin-top: 10px;
+}
+.chatForm input{
+  padding: 3px 5px;
+}
+.chatForm input.name,
+.chatForm input.content{
+  width: 300px;
+}
+.chatForm input.send{
+  margin-top: 20px;
+  margin-left: 55px;
+  width: 315px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #333;
+  cursor: pointer;
+  outline: none;
+}
